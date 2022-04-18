@@ -13,6 +13,25 @@ PP='\e[91m'
 B='\e[1m'
 CC='\e[0m'
 
+
+printf "
+  _     _____ ___   ____   ____    _    _   _ _   _ _____ ____  
+ | |   |  ___|_ _| / ___| / ___|  / \  | \ | | \ | | ____|  _ \ 
+ | |   | |_   | |  \___ \| |     / _ \ |  \| |  \| |  _| | |_) |
+ | |___|  _|  | |   ___) | |___ / ___ \| |\  | |\  | |___|  _ < 
+ |_____|_|   |___| |____/ \____/_/   \_\_| \_|_| \_|_____|_| \_\
+                                                                
+	coded by AkM
+	insta: 0x.akm
+
+
+"
+
+
+
+
+
+
 banner(){
 	cat << "EOF"
   _     _____ ___   ____   ____    _    _   _ _   _ _____ ____  
@@ -35,8 +54,8 @@ while read -r line; do
     ch_vu=$(curl -s $web$line -L)
     if [[ $ch_vu =~ "/bin/bash" ]]; then
         #echo $web$line
-        printf "${OG}\nVULN"
-        printf "\n$web$line"
+        printf "${OG}\nVULN: "
+        echo "$web$line"
         break
     else
         printf "${PP}\nNOT VULN"
