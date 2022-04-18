@@ -30,7 +30,6 @@ EOF
 web=$1
 echo enter your payload
 read payload
-#payloads=/home/akm/lfipay.txt
 
 while read -r line; do
     ch_vu=$(curl -s $web$line -L)
